@@ -1,0 +1,376 @@
+/* Base styles (for mobile) */
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  padding: 10px;
+}
+
+.header {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+  body {
+      font-size: 18px;
+  }
+
+  .container {
+      width: 90%;
+      margin: 0 auto;
+  }
+
+  .header {
+      font-size: 2rem;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  body {
+      font-size: 20px;
+  }
+
+  .container {
+      width: 80%;
+      max-width: 1200px;
+  }
+
+  .header {
+      font-size: 2.5rem;
+  }
+}
+
+/* Mobile layout (stacked) */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+/* Tablet layout (2 columns) */
+@media (min-width: 768px) {
+  .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop layout (3 columns) */
+@media (min-width: 1024px) {
+  .grid-container {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Body Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.carousel {
+  width:100%;
+  height: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+.carousel img {
+  width: 100%;
+  display: none;
+}
+.carousel img.active {
+  display: block;
+}
+.carousel-buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+.carousel-buttons button {
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+
+/* Grid Layout for API Products */
+#api-product-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Spacing between product cards */
+  padding: 0 20px; /* Add some padding on the sides */
+}
+
+/* Product Card Styling */
+#api-product-gallery .product-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  padding: 15px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#api-product-gallery .product-card:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Image */
+#api-product-gallery .product-card img {
+  width: 100%;
+  height: 200px; /* Fixed height for uniformity */
+  object-fit: contain; /* Ensure images fit properly */
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Product Title */
+#api-product-gallery .product-card h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+  white-space: nowrap; /* Prevent title from wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis for long titles */
+}
+
+/* Product Price */
+#api-product-gallery .product-card p.price {
+  font-size: 1.1rem;
+  color: #e74c3c;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Product Description */
+#api-product-gallery .product-card p.description {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 15px;
+  height: 60px; /* Fixed height for description */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3; /* Standard property */
+  
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+  }
+  
+  header {
+    background-color: #0073e6;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  nav {
+    background-color: #0056a3;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  .container {
+    padding: 20px;
+  }
+  
+  /* Product Section */
+  .products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .product {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .product h3 {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .product p {
+    color: #555;
+    font-size: 16px;
+  }
+  
+  .product button {
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .product button:hover {
+    background-color: #0056a3;
+  }
+
+
+  /* Contact Form Styling */
+#contact {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+#contact h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+#todo-list {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 40px;
+}
+
+#todo-list input {
+  padding: 10px;
+  width: 80%;
+  margin-right: 10px;
+}
+
+#todo-list button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#todo-list button:hover {
+  background-color: #45a049;
+}
+
+#todo-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+#todo-list li {
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#todo-list li button {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#todo-list li button:hover {
+  background-color: #ff2e00;
+}
+
+  /* Footer */
+  footer {
+    background-color: #0073e6;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+  }
+  

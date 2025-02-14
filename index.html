@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to Shop</h1>
+    <p>Your one-stop shop for everything!</p>
+  </header>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Shop</a>
+    <a href="#">Contact</a>
+    <a href="#">About</a>
+  </nav>
+  <div class="carousel">
+    <img src="carosal1.jpg" class="active" alt="Image 1">
+    <img src="carosal2.jpg" alt="Image 2">
+    <img src="carosal3.png" alt="Image 3">
+    <img src="carosal4.png" alt="image 4">
+    <div class="carousel-buttons">
+        <button id="prev">Previous</button>
+        <button id="next">Next</button>
+    </div>
+    <div class="carousel-indicators">
+        <div class="indicator active" data-index="0"></div>
+        <div class="indicator" data-index="1"></div>
+        <div class="indicator" data-index="2"></div>
+    </div>
+</div>
+  <div class="container">
+    <h2>Our Products</h2>
+    <div class="products">
+      <div class="product">
+        <img src="jk" alt="Jacket">
+        <h3>Jacket</h3>
+        <p>$10.00</p>
+        <button onclick="addToCart('Jacket')">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="sh" alt="Mens Combo">
+        <h3>Mens Combo</h3>
+        <p>$15.00</p>
+        <button onclick="addToCart('Mens Combo')">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="wp" alt="Suits">
+        <h3>Suits</h3>
+        <p>$20.00</p>
+        <button onclick="addToCart('Suits')">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="products">
+    <div class="product">
+      <img src="shirt.jpg" alt="Product 4">
+      <h3>Shirts</h3>
+      <p>$15.00</p>
+      <button onclick="addToCart('shirt')">Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="Sweter2" alt="Product 5">
+      <h3>Sweters</h3>
+      <p>$15.00</p>
+      <button onclick="addToCart('sweter')">Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="pant .jpg" alt="Pant">
+      <h3>Pants</h3>
+      <p>$20.00</p>
+      <button onclick="addToCart('Pant')">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+
+        <!-- Add this section below your existing product sections -->
+        <section id="api-products">
+          <h2>API Products</h2>
+          <div class="product-gallery" id="api-product-gallery">
+      <!-- API products will be dynamically inserted here -->
+         </div>
+      </section>
+
+
+    <!-- New To-Do List Section -->
+    <section id="todo-list">
+      <h2>To-Do List</h2>
+      <input type="text" id="taskInput" placeholder="Enter a new task">
+      <button id="addTaskButton">Add Task</button>
+      <ul id="taskList"></ul>
+  </section>
+
+
+  <section id="contact">
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+          <div>
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your Name" required>
+          </div>
+          <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Your Email" required>
+          </div>
+          <div>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+          </div>
+          <button type="submit">Submit</button>
+      </form>
+  </section>  
+  <footer>
+    <p>&copy; 2025 ShopEase. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
